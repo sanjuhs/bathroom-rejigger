@@ -27,3 +27,6 @@ No measured survey, drainage simulation, complete collision solver, exact commer
 
 - Verified duplication changed 39 → 40 objects and Undo returned to 39. Browser file-input import with an absolute path restored 40 objects and the sage floor.
 - Verified forward walking changed camera position while keeping eye height at 1.62 m. Final npm dependency audit reported zero vulnerabilities.
+
+- Confirmed reload persistence (40 objects, sage floor, basin X = 0.15 m) and downloaded a valid design JSON through the Save design control.
+- At a 390 px viewport, the app loaded and document width stayed 390 px with no horizontal overflow.

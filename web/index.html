@@ -1,7 +1,183 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bathroom Rejigger · Swati’s design studio</title><meta name="description" content="Walk through the existing bathroom and explore a new layout with Swati."></head><body>
-<header><div class="brand"><span class="mark">br<span>↗</span></span><div><strong>Bathroom Rejigger</strong><small>A LITTLE ROOM. A LOT OF POSSIBILITY.</small></div></div><div class="project-tag"><span class="dot"></span> Swati’s design studio <span class="version">01 / WORKING MODEL</span></div><button id="export" class="primary">Save design ↗</button></header>
-<main><aside class="left"><div class="eyebrow">YOUR SPACE, RECONSIDERED</div><h1>Make room<br>for better.</h1><p class="intro">Start with what’s here. Move things around. Find a bathroom that works for you.</p><div class="room-meta"><b>2.40 × 1.50 m</b><span>≈ 3.6 m² · ceiling ≈ 2.60 m</span><small>Estimated dimensions · length ±10 cm</small></div><div class="tabs" role="tablist"><button id="tab-room" class="active" role="tab" aria-selected="true">In the room</button><button id="tab-library" role="tab" aria-selected="false">Add something</button></div><section id="room-panel"><label class="search-label" for="search">Find an object</label><input id="search" placeholder="Basin, bucket, mirror…"><div id="object-list" class="object-list"></div></section><section id="library-panel" hidden><p class="muted">Select a piece to add it. Remove the old fixture separately to try a replacement.</p><div id="catalog" class="catalog"></div></section><div class="sidebar-bottom"><span class="dot"></span> <span id="save-status">Original layout loaded</span><button id="import">Open design</button><input id="file" type="file" accept="application/json,.json" hidden></div></aside>
-<section class="stage"><div class="view-toolbar"><div class="segmented"><button id="orbit" class="active">◈ Explore</button><button id="walk">↟ Walk inside</button><button id="plan">▦ Top view</button></div><button id="cutaway" aria-pressed="true">Cutaway on</button></div><div id="viewport" aria-label="Interactive 3D bathroom"><div id="loading"><span class="spinner"></span>Building your bathroom…</div></div><div class="scene-label"><span class="eyebrow">THE EXISTING BATHROOM</span><strong id="scene-title">A fresh perspective.</strong><p id="scene-hint">Drag to orbit · scroll to zoom · click an object to edit</p></div><div class="bottom-tools"><button id="undo" title="Undo last edit">↶ Undo</button><button id="redo" title="Redo last edit">↷ Redo</button><button id="reset">Reset to existing</button><button id="capture">Save image</button><button id="references">Photo references ↗</button></div><div id="walk-help" hidden>W A S D or arrow keys to walk · mouse to look · Esc to leave<br><button id="leave-walk">Leave walkthrough</button></div><div id="toast" role="status" aria-live="polite"></div></section>
-<aside class="right"><div class="eyebrow">DESIGN DETAILS</div><h2 id="selection-name">Every detail matters.</h2><p id="selection-note" class="muted">Choose an object in the room or from the list to move, rotate or remove it.</p><section id="selection-controls" hidden><div class="section-label">POSITION <span>METRES</span></div><div class="position-fields"><label>Left / right<input id="pos-x" type="number" step="0.01"></label><label>Front / back<input id="pos-z" type="number" step="0.01"></label><label>Height<input id="pos-y" type="number" step="0.01"></label></div><label class="rotation-label">Rotation <input id="rotation" type="number" step="15"> <span>°</span></label><div class="button-pair"><button id="translate" class="active">Move</button><button id="rotate">Rotate</button></div><label class="check"><input id="snap" type="checkbox" checked> Snap to 5 cm / 15°</label><div class="button-pair"><button id="duplicate">Duplicate</button><button id="remove" class="danger">Remove</button></div><p id="placement-warning" class="warning" role="status"></p><p id="source-note" class="source-note"></p></section><section class="finishes"><div class="section-label">TRY A DIFFERENT FINISH</div><label for="surface">Surface</label><select id="surface"><option value="floor">Floor</option><option value="walls">Ivory walls</option><option value="feature">Shower feature wall</option></select><div id="swatches" class="swatches"></div><p id="finish-name" class="muted">Existing finish</p></section><section class="notes"><div class="section-label">NOTES FOR SWATI</div><textarea id="notes" placeholder="What would make this room work better?" rows="4"></textarea><p class="small">Notes are included in your saved design.</p></section><div class="accuracy"><span>↗</span><p><b>A design study, ready to evolve.</b><br>Based on 15 photos and a video. Dimensions, slopes and service routes still need on-site verification.</p></div></aside></main>
-<dialog id="reference-dialog"><button id="close-references">Close ×</button><h2>The room today</h2><p>15 photographs · September 2026</p><img src="./references/contact-sheet.jpg" alt="Contact sheet of all 15 original bathroom photographs"></dialog>
-<script type="module" src="/src/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bathroom Rejigger · Swati’s design studio</title>
+    <meta
+      name="description"
+      content="Walk through the existing bathroom and explore a new layout with Swati."
+    />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="mark">br<span>↗</span></span>
+        <div>
+          <strong>Bathroom Rejigger</strong
+          ><small>A LITTLE ROOM. A LOT OF POSSIBILITY.</small>
+        </div>
+      </div>
+      <div class="project-tag">
+        <span class="dot"></span> Swati’s design studio
+        <span class="version">01 / WORKING MODEL</span>
+      </div>
+      <button id="export" class="primary">Save design ↗</button>
+    </header>
+    <main>
+      <aside class="left">
+        <div class="eyebrow">YOUR SPACE, RECONSIDERED</div>
+        <h1>Make room<br />for better.</h1>
+        <p class="intro">
+          Start with what’s here. Move things around. Find a bathroom that works
+          for you.
+        </p>
+        <div class="room-meta">
+          <b>2.40 × 1.50 m</b><span>≈ 3.6 m² · ceiling ≈ 2.60 m</span
+          ><small>Estimated dimensions · length ±10 cm</small>
+        </div>
+        <div class="tabs" role="tablist">
+          <button id="tab-room" class="active" role="tab" aria-selected="true">
+            In the room</button
+          ><button id="tab-library" role="tab" aria-selected="false">
+            Add something
+          </button>
+        </div>
+        <section id="room-panel">
+          <label class="search-label" for="search">Find an object</label
+          ><input id="search" placeholder="Basin, bucket, mirror…" />
+          <div id="object-list" class="object-list"></div>
+        </section>
+        <section id="library-panel" hidden>
+          <p class="muted">
+            Select a piece to add it. Remove the old fixture separately to try a
+            replacement.
+          </p>
+          <div id="catalog" class="catalog"></div>
+        </section>
+        <div class="sidebar-bottom">
+          <span class="dot"></span>
+          <span id="save-status">Original layout loaded</span
+          ><button id="import">Open design</button
+          ><input
+            id="file"
+            type="file"
+            accept="application/json,.json"
+            hidden
+          />
+        </div>
+      </aside>
+      <section class="stage">
+        <div class="view-toolbar">
+          <div class="segmented">
+            <button id="orbit" class="active">◈ Explore</button
+            ><button id="walk">↟ Walk inside</button
+            ><button id="plan">▦ Top view</button>
+          </div>
+          <button id="cutaway" aria-pressed="true">Cutaway on</button>
+        </div>
+        <div id="viewport" aria-label="Interactive 3D bathroom">
+          <div id="loading">
+            <span class="spinner"></span>Building your bathroom…
+          </div>
+        </div>
+        <div class="scene-label">
+          <span class="eyebrow">THE EXISTING BATHROOM</span
+          ><strong id="scene-title">A fresh perspective.</strong>
+          <p id="scene-hint">
+            Drag to orbit · scroll to zoom · click an object to edit
+          </p>
+        </div>
+        <div class="bottom-tools">
+          <button id="undo" title="Undo last edit">↶ Undo</button
+          ><button id="redo" title="Redo last edit">↷ Redo</button
+          ><button id="reset">Reset to existing</button
+          ><button id="capture">Save image</button
+          ><button id="references">Photo references ↗</button>
+        </div>
+        <div id="walk-help" hidden>
+          W A S D or arrow keys to walk · mouse to look · Esc to leave<br /><button
+            id="leave-walk"
+          >
+            Leave walkthrough
+          </button>
+        </div>
+        <div id="toast" role="status" aria-live="polite"></div>
+      </section>
+      <aside class="right">
+        <div class="eyebrow">DESIGN DETAILS</div>
+        <h2 id="selection-name">Every detail matters.</h2>
+        <p id="selection-note" class="muted">
+          Choose an object in the room or from the list to move, rotate or
+          remove it.
+        </p>
+        <section id="selection-controls" hidden>
+          <div class="section-label">POSITION <span>METRES</span></div>
+          <div class="position-fields">
+            <label
+              >Left / right<input id="pos-x" type="number" step="0.01" /></label
+            ><label
+              >Front / back<input id="pos-z" type="number" step="0.01" /></label
+            ><label>Height<input id="pos-y" type="number" step="0.01" /></label>
+          </div>
+          <label class="rotation-label"
+            >Rotation <input id="rotation" type="number" step="15" />
+            <span>°</span></label
+          >
+          <div class="button-pair">
+            <button id="translate" class="active">Move</button
+            ><button id="rotate">Rotate</button>
+          </div>
+          <label class="check"
+            ><input id="snap" type="checkbox" checked /> Snap to 5 cm /
+            15°</label
+          >
+          <div class="button-pair">
+            <button id="duplicate">Duplicate</button
+            ><button id="remove" class="danger">Remove</button>
+          </div>
+          <p id="placement-warning" class="warning" role="status"></p>
+          <p id="source-note" class="source-note"></p>
+        </section>
+        <section class="finishes">
+          <div class="section-label">TRY A DIFFERENT FINISH</div>
+          <label for="surface">Surface</label
+          ><select id="surface">
+            <option value="floor">Floor</option>
+            <option value="walls">Ivory walls</option>
+            <option value="feature">Shower feature wall</option>
+          </select>
+          <div id="swatches" class="swatches"></div>
+          <p id="finish-name" class="muted">Existing finish</p>
+        </section>
+        <section class="notes">
+          <div class="section-label">NOTES FOR SWATI</div>
+          <textarea
+            id="notes"
+            placeholder="What would make this room work better?"
+            rows="4"
+          ></textarea>
+          <p class="small">Notes are included in your saved design.</p>
+        </section>
+        <div class="accuracy">
+          <span>↗</span>
+          <p>
+            <b>A design study, ready to evolve.</b><br />Based on 15 photos and
+            a video. Dimensions, slopes and service routes still need on-site
+            verification.
+          </p>
+        </div>
+      </aside>
+    </main>
+    <dialog id="reference-dialog">
+      <button id="close-references">Close ×</button>
+      <h2>The room today</h2>
+      <p>15 photographs · September 2026</p>
+      <img
+        src="./references/contact-sheet.jpg"
+        alt="Contact sheet of all 15 original bathroom photographs"
+      />
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

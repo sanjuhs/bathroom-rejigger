@@ -11,7 +11,7 @@ Build an editable, walkable reconstruction of the current bathroom for Swati, th
 - [x] Allow object placement, rotation, removal, replacement, and tile finish exploration.
 - [x] Include alternative toilets, basins, showers, geysers, cabinetry, and plug points.
 - [x] Save/share proposed layouts and preserve the original scene.
-- [ ] Publish a public GitHub backup under the MIT license.
+- [x] Publish a public GitHub backup under the MIT license.
 
 ## Accuracy and design constraints
 
@@ -31,3 +31,7 @@ A tape measure is sufficient. A phone measurement app can provide an interim est
 ## Working approach
 
 Keep reproducible Python modeling scripts, a complete `.blend` master, portable GLB assets, renders, original references, and the editor together. Use a separate background Blender process so the other agent's live session is unaffected. The existing layout is always recoverable with Reset; designs can be exported to JSON and re-imported.
+
+## First working version
+
+Completed on 29 September 2026. Public source and original references: https://github.com/sanjuhs/bathroom-rejigger. Browser studio: https://sanjuhs.github.io/bathroom-rejigger/. The next refinement milestone is a measured survey and Swati’s layout feedback.

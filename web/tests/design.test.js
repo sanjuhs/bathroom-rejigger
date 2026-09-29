@@ -1,10 +1,49 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import {validateDesign} from '../src/design.js';
-const valid=()=>({schema:1,notes:'Move basin',finishes:{floor:'sage',walls:'existing',feature:'limestone'},objects:[{id:'basin',p:[0,1,0],q:[0,0,0,1],visible:true}]});
-const check=d=>validateDesign(d,new Set(['basin']),new Set(['oak_vanity']));
-test('round-trips a valid proposed layout',()=>assert.deepEqual(check(JSON.parse(JSON.stringify(valid()))),valid()));
-test('rejects incomplete original scene',()=>{let d=valid();d.objects=[];assert.throws(()=>check(d));});
-test('rejects unknown assets, duplicate IDs, nonfinite transforms',()=>{for(const change of [d=>d.objects[0].asset='unknown',d=>d.objects.push(d.objects[0]),d=>d.objects[0].p[0]=Infinity,d=>d.objects[0].q=[0,0,0,0]]){let d=valid();change(d);assert.throws(()=>check(d));}});
-test('allows an added catalog fixture',()=>{let d=valid();d.objects.push({id:'new-id',asset:'oak_vanity',p:[0,0,0],q:[0,0,0,1],visible:true});assert.equal(check(d).objects.length,2);});
-test('rejects malformed finishes and oversized notes',()=>{let d=valid();d.finishes.floor='unknown';assert.throws(()=>check(d));d=valid();d.notes='a'.repeat(20001);assert.throws(()=>check(d));});
+import test from "node:test";
+import assert from "node:assert/strict";
+import { validateDesign } from "../src/design.js";
+const valid = () => ({
+  schema: 1,
+  notes: "Move basin",
+  finishes: { floor: "sage", walls: "existing", feature: "limestone" },
+  objects: [{ id: "basin", p: [0, 1, 0], q: [0, 0, 0, 1], visible: true }],
+});
+const check = (d) =>
+  validateDesign(d, new Set(["basin"]), new Set(["oak_vanity"]));
+test("round-trips a valid proposed layout", () =>
+  assert.deepEqual(check(JSON.parse(JSON.stringify(valid()))), valid()));
+test("rejects incomplete original scene", () => {
+  let d = valid();
+  d.objects = [];
+  assert.throws(() => check(d));
+});
+test("rejects unknown assets, duplicate IDs, nonfinite transforms", () => {
+  for (const change of [
+    (d) => (d.objects[0].asset = "unknown"),
+    (d) => d.objects.push(d.objects[0]),
+    (d) => (d.objects[0].p[0] = Infinity),
+    (d) => (d.objects[0].q = [0, 0, 0, 0]),
+  ]) {
+    let d = valid();
+    change(d);
+    assert.throws(() => check(d));
+  }
+});
+test("allows an added catalog fixture", () => {
+  let d = valid();
+  d.objects.push({
+    id: "new-id",
+    asset: "oak_vanity",
+    p: [0, 0, 0],
+    q: [0, 0, 0, 1],
+    visible: true,
+  });
+  assert.equal(check(d).objects.length, 2);
+});
+test("rejects malformed finishes and oversized notes", () => {
+  let d = valid();
+  d.finishes.floor = "unknown";
+  assert.throws(() => check(d));
+  d = valid();
+  d.notes = "a".repeat(20001);
+  assert.throws(() => check(d));
+});
