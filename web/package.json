@@ -1,0 +1,1 @@
+{"name":"bathroom-rejigger","version":"0.1.0","private":true,"type":"module","scripts":{"dev":"vite --host 127.0.0.1","build":"vite build --base=./","preview":"vite preview --host 127.0.0.1","test":"node --test tests/*.test.js"},"dependencies":{"three":"0.183.2"},"devDependencies":{"vite":"^7.3.6"}}

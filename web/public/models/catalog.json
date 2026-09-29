@@ -1,0 +1,37 @@
+[
+  {
+    "id": "modern_toilet",
+    "label": "Compact close-coupled toilet",
+    "file": "models/modern_toilet.glb"
+  },
+  {
+    "id": "oak_vanity",
+    "label": "Floating oak vanity",
+    "file": "models/oak_vanity.glb"
+  },
+  {
+    "id": "rain_shower",
+    "label": "Rain shower",
+    "file": "models/rain_shower.glb"
+  },
+  {
+    "id": "compact_geyser",
+    "label": "Compact geyser",
+    "file": "models/compact_geyser.glb"
+  },
+  {
+    "id": "tall_cabinet",
+    "label": "Tall oak storage cabinet",
+    "file": "models/tall_cabinet.glb"
+  },
+  {
+    "id": "modern_basin",
+    "label": "Rectangular wall basin",
+    "file": "models/modern_basin.glb"
+  },
+  {
+    "id": "modern_socket",
+    "label": "Modern switched socket",
+    "file": "models/modern_socket.glb"
+  }
+]

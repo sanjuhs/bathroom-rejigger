@@ -1,0 +1,314 @@
+[
+  {
+    "id": "floor",
+    "label": "Existing tiled floor",
+    "category": "surface",
+    "reference": "IMG_0370, 0377, 0380",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "wall_north",
+    "label": "North wall",
+    "category": "shell",
+    "reference": "",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "wall_west",
+    "label": "West wall",
+    "category": "shell",
+    "reference": "",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "wall_east",
+    "label": "East wall",
+    "category": "shell",
+    "reference": "",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "wall_south",
+    "label": "South wall",
+    "category": "shell",
+    "reference": "",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "ceiling",
+    "label": "Ceiling and structural beams",
+    "category": "shell",
+    "reference": "",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "toilet",
+    "label": "Existing floor-mounted toilet",
+    "category": "fixture",
+    "reference": "IMG_0369, 0370 / video 24 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "basin",
+    "label": "Existing wall-hung basin",
+    "category": "fixture",
+    "reference": "IMG_0379, 0380 / video 16 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "mirror",
+    "label": "Silver-framed mirror cabinet",
+    "category": "fixture",
+    "reference": "IMG_0381, 0382",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "towel_ring",
+    "label": "Round towel ring",
+    "category": "fixture",
+    "reference": "IMG_0381",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "window",
+    "label": "Recessed barred window",
+    "category": "fixture",
+    "reference": "IMG_0369 / video 24 s",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "shower",
+    "label": "Existing exposed shower and mixer",
+    "category": "fixture",
+    "reference": "IMG_0378, 0379 / video 4 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "soap_tray",
+    "label": "Wall soap tray",
+    "category": "fixture",
+    "reference": "IMG_0380",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "geyser",
+    "label": "Existing cylindrical geyser",
+    "category": "fixture",
+    "reference": "IMG_0371 / video 26 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "cabinet",
+    "label": "Existing yellow wall cabinet",
+    "category": "fixture",
+    "reference": "IMG_0372, 0374",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "towel_rail",
+    "label": "Long towel rail",
+    "category": "fixture",
+    "reference": "IMG_0373, 0375",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "door",
+    "label": "Yellow entrance door",
+    "category": "fixture",
+    "reference": "IMG_0375, 0376 / video 40 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "loft",
+    "label": "Overhead storage cupboard",
+    "category": "fixture",
+    "reference": "IMG_0383",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "drying_rods",
+    "label": "Two overhead drying rods",
+    "category": "fixture",
+    "reference": "IMG_0376, 0378, 0383",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "socket",
+    "label": "Existing switch and plug point",
+    "category": "fixture",
+    "reference": "IMG_0381",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "bulb",
+    "label": "Exposed wall light",
+    "category": "fixture",
+    "reference": "IMG_0381",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "cable",
+    "label": "Exposed geyser cable",
+    "category": "fixture",
+    "reference": "IMG_0369, 0381",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "bidet",
+    "label": "Handheld bidet sprayer and hose",
+    "category": "fixture",
+    "reference": "IMG_0370 / video 22 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "teal_bucket",
+    "label": "Teal shower bucket",
+    "category": "accessory",
+    "reference": "IMG_0373, 0379",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "tan_bucket",
+    "label": "Ochre utility bucket",
+    "category": "accessory",
+    "reference": "IMG_0373, 0379",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "teal_mug",
+    "label": "Teal bath mug",
+    "category": "accessory",
+    "reference": "IMG_0373, 0379",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "tan_mug",
+    "label": "Ochre floor mug",
+    "category": "accessory",
+    "reference": "IMG_0373, 0379",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "toilet_brush",
+    "label": "Toilet brush on floor",
+    "category": "accessory",
+    "reference": "IMG_0370 / video 22 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "drain",
+    "label": "Square floor drain",
+    "category": "fixture",
+    "reference": "video 20 s",
+    "estimated": true,
+    "fixed": true
+  },
+  {
+    "id": "red_bottle",
+    "label": "Red toiletry bottle",
+    "category": "accessory",
+    "reference": "IMG_0380 / video 16 s, 24 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "soap_pump",
+    "label": "Hand wash pump",
+    "category": "accessory",
+    "reference": "IMG_0380 / video 16 s, 24 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "white_pump",
+    "label": "White pump bottle",
+    "category": "accessory",
+    "reference": "IMG_0380 / video 16 s, 24 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "sill_yellow_bottle",
+    "label": "Window sill yellow bottle",
+    "category": "accessory",
+    "reference": "IMG_0380 / video 16 s, 24 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "sill_white_bottle",
+    "label": "Window sill white bottle",
+    "category": "accessory",
+    "reference": "IMG_0380 / video 16 s, 24 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "sill_green_bottle",
+    "label": "Window sill green bottle",
+    "category": "accessory",
+    "reference": "IMG_0380 / video 16 s, 24 s",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "toothbrush",
+    "label": "Toothbrush",
+    "category": "accessory",
+    "reference": "IMG_0380",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "toothpaste",
+    "label": "Toothpaste tube",
+    "category": "accessory",
+    "reference": "IMG_0380",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "small_jar",
+    "label": "Small white cosmetic pot",
+    "category": "accessory",
+    "reference": "IMG_0380",
+    "estimated": true,
+    "fixed": false
+  },
+  {
+    "id": "sill_razor",
+    "label": "Small toiletry on window sill",
+    "category": "accessory",
+    "reference": "video 24 s",
+    "estimated": true,
+    "fixed": false
+  }
+]
