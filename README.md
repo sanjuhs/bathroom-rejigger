@@ -71,3 +71,7 @@ blender --background --factory-startup --python scripts/import_design.py -- my-d
 ```
 
 This transfers placement, rotation, visibility, copied/added fixtures and notes. Proposal finishes transfer as approximate solid colors; browser procedural patterns are not baked by this importer. The existing master is protected from overwrite.
+
+## Realism development
+
+A separate [lighting and material study](docs/PHOTOREALISM.md) explores more natural interior lighting, reflective ceramic/chrome, surface roughness and wear. Rebuild it with `scripts/render_realism_study.py`. It produces `blender/bathroom-realism-study.blend` and `renders/realism-study.png`; the interactive editor continues to use the lightweight baseline assets.
